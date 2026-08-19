@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Subnetting & VLSM Calculator | Ali Naser</title>
+  <link rel="stylesheet" href="subnet-calculator.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="tool-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">ALI NASER <span>/ TOOLS</span></a>
+      <a href="../index.html#work" class="back-link">← Back to Portfolio</a>
+    </div>
+  </header>
+
+  <main class="tool-main">
+    <section class="calculator-container">
+      <div class="tool-title-block">
+        <span class="tool-tag">NETWORK UTILITY</span>
+        <h1>IP Subnetting & VLSM Calculator</h1>
+        <p>Calculate network boundaries, usable IP ranges, wildcard masks, and binary address breakdowns for enterprise network planning.</p>
+      </div>
+
+      <!-- QUICK PRESET BUTTONS -->
+      <div class="preset-section">
+        <span class="preset-label">QUICK PRESETS:</span>
+        <button type="button" class="preset-btn" data-ip="192.168.1.1" data-cidr="24">/24 Standard LAN</button>
+        <button type="button" class="preset-btn" data-ip="10.0.0.1" data-cidr="30">/30 Point-to-Point Link</button>
+        <button type="button" class="preset-btn" data-ip="172.16.10.1" data-cidr="28">/28 Server Subnet</button>
+        <button type="button" class="preset-btn" data-ip="10.100.0.1" data-cidr="22">/22 Enterprise Core</button>
+      </div>
+
+      <!-- INPUT FORM -->
+      <div class="calc-card">
+        <form id="subnetForm" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="ipInput">IP ADDRESS</label>
+              <input type="text" id="ipInput" value="192.168.1.150" placeholder="e.g. 192.168.1.1">
+            </div>
+
+            <div class="input-group">
+              <label for="cidrSelect">SUBNET MASK (CIDR)</label>
+              <select id="cidrSelect"></select>
+            </div>
+          </div>
+
+          <button type="button" id="calculateBtn" class="btn-calc">Calculate Subnet</button>
+        </form>
+      </div>
+
+      <!-- RESULTS SECTION -->
+      <div id="resultsCard" class="results-card">
+        <div class="results-header">
+          <h3>SUBNET CALCULATION RESULTS</h3>
+          <button type="button" id="copyResultsBtn" class="btn-copy">📋 Copy Summary</button>
+        </div>
+
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-label">NETWORK ADDRESS</span>
+            <span id="resNetAddr" class="metric-value highlight">192.168.1.0</span>
+          </div>
+
+          <div class="metric-item">
+            <span class="metric-label">SUBNET MASK</span>
+            <span id="resSubnetMask" class="metric-value">255.255.255.0</span>
+          </div>
+
+          <div class="metric-item">
+            <span class="metric-label">BROADCAST ADDRESS</span>
+            <span id="resBcastAddr" class="metric-value">192.168.1.255</span>
+          </div>
+
+          <div class="metric-item">
+            <span class="metric-label">WILDCARD MASK</span>
+            <span id="resWildcard" class="metric-value">0.0.0.255</span>
+          </div>
+
+          <div class="metric-item full-width">
+            <span class="metric-label">USABLE HOST RANGE</span>
+            <span id="resHostRange" class="metric-value">192.168.1.1 — 192.168.1.254</span>
+          </div>
+
+          <div class="metric-item">
+            <span class="metric-label">USABLE HOSTS</span>
+            <span id="resUsableHosts" class="metric-value highlight">254</span>
+          </div>
+
+          <div class="metric-item">
+            <span class="metric-label">IP CLASS</span>
+            <span id="resIpClass" class="metric-value">Class C</span>
+          </div>
+        </div>
+
+        <!-- BINARY BREAKDOWN -->
+        <div class="binary-block">
+          <span class="metric-label">BINARY BREAKDOWN</span>
+          <div class="binary-row">
+            <span>IP Address:</span>
+            <code id="binIp">11000000.168...</code>
+          </div>
+          <div class="binary-row">
+            <span>Subnet Mask:</span>
+            <code id="binMask">11111111.11111111...</code>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="subnet-calculator.js"></script>
+</body>
+</html>

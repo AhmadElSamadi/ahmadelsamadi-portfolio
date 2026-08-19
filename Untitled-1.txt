@@ -1,0 +1,4 @@
+git config --global user.name "Ahmad El Samadi"
+
+git config --global user.email "ahmadsamadi33@gmail.com"
+
