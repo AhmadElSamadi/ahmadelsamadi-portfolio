@@ -12,7 +12,7 @@ const roleTarget = document.getElementById('roleTarget');
 if (nameInput) {
   nameInput.addEventListener('input', (e) => {
     const val = e.target.value.trim();
-    const text = val.length > 0 ? val : 'Ali Naser';
+    const text = val.length > 0 ? val : 'Ahmad El Samadi';
     if (authorNameTarget) authorNameTarget.textContent = text.toUpperCase();
     if (signatureNameTarget) signatureNameTarget.textContent = text;
   });
@@ -56,13 +56,26 @@ if (printBtn) {
   });
 }
 
-// 4. SCROLL REVEAL OBSERVER
-const revealElements = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-  });
-}, { threshold: 0.1 });
-revealElements.forEach(el => revealObserver.observe(el));
+// 4. SCROLL PROGRESS BAR (GPU ScaleX)
+let isScrolling = false;
+
+function updateScrollProgress() {
+  const winScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = height > 0 ? winScroll / height : 0;
+  
+  const progressBar = document.getElementById('progressBar');
+  if (progressBar) {
+    progressBar.style.transform = `scaleX(${progress})`;
+  }
+  isScrolling = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!isScrolling) {
+    window.requestAnimationFrame(updateScrollProgress);
+    isScrolling = true;
+  }
+});
+
+window.addEventListener('DOMContentLoaded', updateScrollProgress);
