@@ -3,173 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Naser | Communications & Electronics Engineering Portfolio</title>
+  <title>Ahmad El Samadi | Communications & Electronics Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="scroll-progress-container">
+  <div class="scroll-progress-bar" id="progressBar"></div>
+</div>
 
   <!-- NAVIGATION BAR -->
   <header>
     <div class="nav-container">
-      <a href="#hero" class="brand">ALI NASER</a>
+      <a href="#hero" class="brand">
+        <span class="brand-badge">AS</span>
+        <div class="brand-details">
+          <span class="brand-name">Ahmad El Samadi</span>
+          <span class="brand-subtitle">Engineering Portfolio</span>
+        </div>
+      </a>
       <nav>
-        <a href="tools/subnet-calculator.html" class="nav-link">🧮 IP Subnet Calculator</a>
-        <a href="#profile">Profile</a>
+        <a href="#profile">Profile & Education</a>
         <a href="#work">Projects</a>
         <a href="#wrn">WRN Assignments</a>
-        <a href="#reflection">WRN Reflection</a>
         <a href="#training">Training</a>
-        <a href="#education">Education</a>
         <a href="#letter">Cover Letter</a>
       </nav>
-      <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="Ahmad El Samadi - CV.pdf" target="_blank" class="btn-cv-top">CV ↗</a>
+      <div class="nav-actions">
+        <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="Ahmad El Samadi - CV.pdf" target="_blank" class="glass-pill glass-sm">
+          <span>CV</span>
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- HERO SECTION -->
-    <section id="hero" class="hero-section reveal">
+    <section id="hero" class="hero-section">
+      <!-- Left Side: Subtitle, Title, Bio & Action Buttons -->
       <div class="hero-left">
-        <div class="badge">COMPREHENSIVE CAREER PORTFOLIO</div>
-        <h1 class="hero-title">
-          Engineering networks that <span class="highlight-green">route</span>, <span class="highlight-blue">connect</span>, and <span class="highlight-dark">secure</span>.
-        </h1>
+        <p class="subtitle">BEIRUT ARAB UNIVERSITY • BEIRUT, LEBANON</p>
+        <h1 class="hero-title">Ahmad El Samadi</h1>
         <p class="hero-bio">
-          Communications and Electronics Engineering student at Beirut Arab University building enterprise network infrastructure, routing topologies, embedded logic, and automated control systems.
+          Motivated Communications and Electronics Engineering student at Beirut Arab University with applied knowledge in digital systems, hardware integration, and enterprise CCNA-level expertise in IT infrastructure. Eager to use problem-solving skills and readiness to learn in a real-world tech environment.
         </p>
-      </div>
-
-      <!-- LIVE NETWORK MAP GRAPHIC -->
-      <div class="hero-right">
-        <div class="network-map-card">
-          <div class="map-header">
-            <span class="map-title">SYSTEM ARCHITECTURE</span>
-            <span class="status-online"><span class="dot"></span> ONLINE</span>
-          </div>
-
-          <div class="diagram-container">
-            <svg class="diagram-lines" viewBox="0 0 300 200">
-              <defs>
-                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="2" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <!-- CURVED CONNECTION PATHS (GOING IN) -->
-              <path id="path-route-in" d="M 60,50 Q 100,60 150,100" class="dash-line" />
-              <path id="path-switch-in" d="M 60,150 Q 100,140 150,100" class="dash-line" />
-              <path id="path-secure-in" d="M 240,50 Q 200,60 150,100" class="dash-line" />
-              <path id="path-connect-in" d="M 240,150 Q 200,140 150,100" class="dash-line" />
-
-              <!-- HIDDEN CURVED PATHS (COMING OUT) -->
-              <path id="path-route-out" d="M 150,100 Q 100,80 60,50" class="dash-line-hidden" />
-              <path id="path-switch-out" d="M 150,100 Q 100,120 60,150" class="dash-line-hidden" />
-              <path id="path-secure-out" d="M 150,100 Q 200,80 240,50" class="dash-line-hidden" />
-              <path id="path-connect-out" d="M 150,100 Q 200,120 240,150" class="dash-line-hidden" />
-
-              <!-- ANIMATED PACKETS (GOING IN) -->
-              <circle r="3" fill="#1a6b47" filter="url(#glow)">
-                <animateMotion dur="2.2s" repeatCount="indefinite">
-                  <mpath href="#path-route-in"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="3" fill="#1a6b47" filter="url(#glow)">
-                <animateMotion dur="2.6s" repeatCount="indefinite">
-                  <mpath href="#path-switch-in"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="3" fill="#1a6b47" filter="url(#glow)">
-                <animateMotion dur="2.4s" repeatCount="indefinite">
-                  <mpath href="#path-secure-in"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="3" fill="#1a6b47" filter="url(#glow)">
-                <animateMotion dur="2.1s" repeatCount="indefinite">
-                  <mpath href="#path-connect-in"/>
-                </animateMotion>
-              </circle>
-
-              <!-- ANIMATED PACKETS (COMING OUT) -->
-              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
-                <animateMotion dur="2.7s" repeatCount="indefinite">
-                  <mpath href="#path-route-out"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
-                <animateMotion dur="2.3s" repeatCount="indefinite">
-                  <mpath href="#path-switch-out"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
-                <animateMotion dur="2.8s" repeatCount="indefinite">
-                  <mpath href="#path-secure-out"/>
-                </animateMotion>
-              </circle>
-
-              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
-                <animateMotion dur="2.5s" repeatCount="indefinite">
-                  <mpath href="#path-connect-out"/>
-                </animateMotion>
-              </circle>
+        <div class="hero-buttons">
+          <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="Ahmad El Samadi - CV.pdf" target="_blank" class="glass-pill glass-primary">
+            <span>Download CV</span>
+          </a>
+          <a href="https://linkedin.com/in/ahmad-el-samadi" target="_blank" class="glass-pill">
+            <span>LinkedIn Profile</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
-
-            <div class="node node-top-left">ROUTE</div>
-            <div class="node node-bottom-left">SWITCH</div>
-            <div class="node node-center">
-              <span>PROCESS</span>
-              <small>CORE / OSPF</small>
-            </div>
-            <div class="node node-top-right">SECURE</div>
-            <div class="node node-bottom-right">CONNECT</div>
-          </div>
-
-          <div class="map-footer">
-            <span>OSPF / VLAN</span>
-            <span class="status-text">ACTIVE</span>
-            <span>WAN / LAN</span>
-            <span class="status-text">LINKED</span>
-          </div>
+          </a>
         </div>
       </div>
+
+      <!-- Right Side: Profile Image -->
+      <div class="hero-right">
+        <img src="image/profile.png" alt="Ahmad El Samadi Profile" class="profile-photo">
+      </div>
     </section>
 
-    <!-- PROFESSIONAL LINKS SECTION -->
-    <section class="links-section">
-      <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="Ahmad El Samadi - CV.pdf" target="_blank" class="primary-btn">Download CV</a>
-      <a href="https://linkedin.com/in/ahmad-el-samadi" target="_blank" class="secondary-btn">LinkedIn Profile ↗</a>
-    </section>
-
-    <!-- 01 / PROFILE -->
+    <!-- 01 / PROFILE & BACKGROUND -->
     <section id="profile" class="profile-section reveal">
-      <div class="section-tag">01 / PROFILE</div>
+      <div class="section-tag">01 / PROFILE & BACKGROUND</div>
       
-      <div class="profile-content">
-        <h2 class="profile-headline">
-          I’m most interested in the point where network theory stops being a diagram and starts becoming a <span class="highlight-green-italic">secure, routing system.</span>
-        </h2>
-        
-        <div class="profile-text">
-          <p>My work combines enterprise network infrastructure, routing topologies, and system-level thinking. I enjoy taking a network design from Cisco Packet Tracer simulations to fully operational environments that can route, switch, and secure data reliably.</p>
-          
-          <div class="skill-tags">
-            <span>Routing & Switching</span>
-            <span>OSPF</span>
-            <span>NAT & PAT</span>
-            <span>Access Control Lists (ACLs)</span>
-            <span>VLANs & Trunking</span>
-            <span>EtherChannel</span>
-            <span>Device Hardening</span>
-            <span>Cisco Packet Tracer</span>
-            <span>Network Infrastructure</span>
+      <div class="profile-container">
+        <!-- Top Row: Headline & Bio -->
+        <div class="profile-header-grid">
+          <h2 class="profile-headline">
+            Turning passive network<br>
+            designs into active, <br> <span class="highlight-green-italic">defensively</span> engineered <br> routing <span class="highlight-blue">infrastructures</span>.
+          </h2>
+          <div class="profile-bio">
+            <p>Specialized in enterprise network infrastructure and system-level design, with proficiency in transitioning complex network topologies from simulated Cisco environments into secure, high-availability routing and switching systems. Applying rigorous protocol configurations alongside system-level troubleshooting to deliver resilient network environments built for reliability, scalability, and performance.</p>
+          </div>
+        </div>
+
+        <!-- Bottom Row: Education & Curated Skills Cards -->
+        <div class="profile-details-grid">
+          <!-- Left Card: Education -->
+          <div class="profile-edu-card">
+            <h3 class="profile-subheading">EDUCATION</h3>
+            
+            <div class="edu-list">
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <span class="edu-school">BEIRUT ARAB UNIVERSITY • Debbieh, Lebanon</span>
+                  <span class="edu-date">2024 — Present</span>
+                </div>
+                <h4 class="edu-degree">B.E. in Communications and Electronics Engineering</h4>
+                <p class="edu-meta">CGPA: 3.45 / 4.00</p>
+              </div>
+
+              <div class="edu-divider-line"></div>
+
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <span class="edu-school">HARIRI HIGH SCHOOL • Saida, Lebanon</span>
+                  <span class="edu-date">Sep 2023 — Jun 2024</span>
+                </div>
+                <h4 class="edu-degree">High School Diploma</h4>
+                <p class="edu-meta">Maintained Honor's List status across Grades 10–12</p>
+              </div>
+
+              <div class="edu-divider-line"></div>
+
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <span class="edu-school">ABDULAZIZ INTERNATIONAL SCHOOL <br> (SABIS) • Riyadh, Saudi Arabia</span>
+                  <span class="edu-date">Sep 2011 — Jun 2020</span>
+                </div>
+                <h4 class="edu-degree">Grades 1–9</h4>
+                <p class="edu-meta">Maintained high academic standing throughout primary and middle school</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card: Curated Key Skills -->
+          <div class="profile-skills-card">
+            <h3 class="profile-subheading">TECHNICAL & CORE SKILLS</h3>
+            
+            <div class="skill-category">
+              <span class="category-label">Networking & Infrastructure</span>
+              <div class="skill-tags">
+                <span>Routing & Switching</span>
+                <span>OSPF</span>
+                <span>VLANs & Trunking</span>
+                <span>ACLs</span>
+                <span>IPv4 & IPv6 Subnetting</span>
+                <span>Network Troubleshooting</span>
+                <span>Cisco Packet Tracer</span>
+                <span>Device Hardening</span>
+                <span>Dynamic NAT/PAT</span>
+                <span>DHCP & DNS Configuration</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <span class="category-label">Hardware & Embedded Systems</span>
+              <div class="skill-tags">
+                <span>Circuit Design (Analog & Digital)</span>
+                <span>PIC Microcontrollers</span>
+                <span>Intel 8085 & PIC Assembly</span>
+                <span>Arduino</span>
+                <span>Sensors & Actuators Interfacing</span>
+                <span>Serial Communication (UART)</span>
+                <span>Breadboard Prototyping</span>
+                <span>Oscilloscopes & Multimeters</span>
+                <span>Logic Encoders & Decoders</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <span class="category-label">Core Competencies</span>
+              <div class="skill-tags">
+                <span>Problem-Solving</span>
+                <span>Critical Thinking</span>
+                <span>Team Collaboration</span>
+                <span>Adaptability</span>
+                <span>Project Management</span>
+                <span>Analytical Thinking</span>
+                <span>Communication Skills</span>
+                <span>Time Management</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -178,48 +182,60 @@
     <!-- 02 / SELECTED ENGINEERING PROJECTS -->
     <section id="work" class="projects-section reveal">
       <div class="section-tag" style="margin-bottom: 20px;">02 / SELECTED ENGINEERING PROJECTS</div>
-      <p class="section-desc" style="margin-bottom: 40px; font-size: 1.2rem; color: #5c5953;">Demonstrated networking builds, enterprise simulations, hardware control circuits, and logic systems.</p>
+      <p class="section-desc" style="margin-bottom: 30px; font-size: 1.1rem;">Demonstrated networking builds, enterprise simulations, hardware control circuits, and logic systems.</p>
 
       <div class="project-grid">
         <article class="project-card">
-          <div class="card-num">01</div>
-          <h3>Municipal Network Infrastructure</h3>
-          <p>Engineered and deployed a complete network infrastructure for a municipality from the ground up, establishing dynamic subnets, configuring physical routing equipment, and assuring departmental isolation.</p>
+          <div>
+            <div class="card-num">01</div>
+            <h3>Municipal Network Infrastructure</h3>
+            <p>Engineered and deployed a complete network infrastructure for a municipality from the ground up, establishing dynamic subnets, configuring physical routing equipment, and assuring departmental isolation.</p>
+          </div>
           <div class="tech-tags"><span>Network Design</span><span>Routing & Switching</span><span>VLANs</span></div>
         </article>
 
         <article class="project-card">
-          <div class="card-num">02</div>
-          <h3>Enterprise Topologies & Security</h3>
-          <p>Designed and validated scalable enterprise topologies in Cisco Packet Tracer incorporating multi-area OSPF, dynamic NAT/PAT, EtherChannel, ACL security policies, and device hardening protocols.</p>
+          <div>
+            <div class="card-num">02</div>
+            <h3>Enterprise Topologies & Security</h3>
+            <p>Designed and validated scalable enterprise topologies in Cisco Packet Tracer incorporating multi-area OSPF, dynamic NAT/PAT, EtherChannel, ACL security policies, and device hardening protocols.</p>
+          </div>
           <div class="tech-tags"><span>Cisco Packet Tracer</span><span>OSPF</span><span>ACLs</span><span>NAT/PAT</span></div>
         </article>
 
         <article class="project-card">
-          <div class="card-num">03</div>
-          <h3>Automated Drive-Thru Simulator</h3>
-          <p>Engineered a dynamic prototype utilizing an Assembly-programmed PIC microcontroller integrated with infrared sensors, microphone input, keypad, LCD display, status LEDs, and servo motor gate logic.</p>
+          <div>
+            <div class="card-num">03</div>
+            <h3>Automated Drive-Thru Simulator</h3>
+            <p>Engineered a dynamic prototype utilizing an Assembly-programmed PIC microcontroller integrated with infrared sensors, microphone input, keypad, LCD display, status LEDs, and servo motor gate logic.</p>
+          </div>
           <div class="tech-tags"><span>PIC Microcontroller</span><span>Assembly</span><span>Sensors</span></div>
         </article>
 
         <article class="project-card">
-          <div class="card-num">04</div>
-          <h3>Digital Logic & Counter Systems</h3>
-          <p>Designed a motion-triggered digital counter featuring hardware signal debouncing alongside binary logic gates and hardware-level clocking circuits.</p>
+          <div>
+            <div class="card-num">04</div>
+            <h3>Digital Logic & Counter Systems</h3>
+            <p>Designed a motion-triggered digital counter featuring hardware signal debouncing alongside binary logic gates and hardware-level clocking circuits.</p>
+          </div>
           <div class="tech-tags"><span>Digital Systems</span><span>Signal Debouncing</span><span>Clock Logic</span></div>
         </article>
 
         <article class="project-card">
-          <div class="card-num">05</div>
-          <h3>Elevator Floor Display System</h3>
-          <p>Designed a 9-floor digital indication system utilizing priority encoders and logic decoders for accurate hardware interfacing and visual display.</p>
+          <div>
+            <div class="card-num">05</div>
+            <h3>Elevator Floor Display System</h3>
+            <p>Designed a 9-floor digital indication system utilizing priority encoders and logic decoders for accurate hardware interfacing and visual display.</p>
+          </div>
           <div class="tech-tags"><span>Priority Encoders</span><span>Logic Decoders</span><span>Digital Interfacing</span></div>
         </article>
 
         <article class="project-card">
-          <div class="card-num">06</div>
-          <h3>Automated Lighting Control Circuit</h3>
-          <p>Assembled a purely hardware-based automotive lighting system to replicate real-world turn signals and high/low beam switching without the use of a microcontroller.</p>
+          <div>
+            <div class="card-num">06</div>
+            <h3>Automated Lighting Control Circuit</h3>
+            <p>Assembled a purely hardware-based automotive lighting system to replicate real-world turn signals and high/low beam switching without the use of a microcontroller.</p>
+          </div>
           <div class="tech-tags"><span>Automotive Systems</span><span>Hardware Logic</span><span>Relay Control</span></div>
         </article>
       </div>
@@ -228,123 +244,205 @@
     <!-- 03 / WRN VIRTUAL DIGITAL ASSIGNMENTS -->
     <section id="wrn" class="wrn-section reveal">
       <div class="section-tag" style="margin-bottom: 20px;">03 / WRN DIGITAL ASSIGNMENTS</div>
-      <p class="section-desc" style="margin-bottom: 40px; font-size: 1.2rem; color: #5c5953;">Work Ready Now Assignment Submissions</p>
+      <p class="section-desc" style="margin-bottom: 40px; font-size: 1.1rem;">Work Ready Now Assignment Submissions</p>
 
       <div class="assignment-grid">
-        
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 01</span>
           <h4>My Professional Development Plan</h4>
           <p>A comprehensive roadmap outlining long-term career goals and the actionable steps to achieve them in the networking engineering field.</p>
-          <a href="./pdfs/ahmad-el-samadi-professional-development-plan.pdf" download="Professional_Development_Plan.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-professional-development-plan.pdf" download="Professional_Development_Plan.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 02</span>
           <h4>Community Mapping</h4>
           <p>A visual exploration of community resources, professional networks, and opportunities available for engineering career growth.</p>
-          <span class="pdf-download-link disabled-link">🕒 PDF will be provided later</span>
+          <span class="glass-pill glass-sm glass-disabled">🕒 PDF Pending</span>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 03</span>
           <h4>Learning Style Graphic</h4>
           <p>An interactive graphic outlining personalized technical learning strategies and auditory information absorption methods.</p>
-          <a href="./pdfs/ahmad-el-samadi-learning-style-portfolio.pdf" download="Learning_Style_Portfolio.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-learning-style-portfolio.pdf" download="Learning_Style_Portfolio.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 04</span>
           <h4>Communication Comic Strip</h4>
           <p>Comparative comic scenarios contrasting effective technical communication against ineffective workplace dialogues.</p>
-          <a href="./pdfs/ahmad-el-samadi-comic-strip.pdf" download="Workplace_Communication_Comics.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-comic-strip.pdf" download="Workplace_Communication_Comics.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 05</span>
           <h4>Customer Service Video</h4>
           <p>A role-play demonstration showcasing effective client interaction and technical problem resolution in an IT support context.</p>
-          <a href="https://youtu.be/Z9uC8aF-RCw?si=_khp39ry5AWsPYp4" target="_blank" class="pdf-download-link">▶ View Video</a>
+          <a href="https://youtu.be/Z9uC8aF-RCw?si=_khp39ry5AWsPYp4" target="_blank" class="glass-pill glass-sm glass-dark">
+            <span>View Video</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 06</span>
           <h4>Observing Communication in the Workplace</h4>
           <p>An in-depth observational study analyzing real-world engineering teamwork and office dynamic protocols.</p>
-          <a href="./pdfs/ahmad-el-samadi-observing-communication-in-the-workplace.pdf" download="Observing_Communication.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-observing-communication-in-the-workplace.pdf" download="Observing_Communication.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 07</span>
           <h4>How a Company Hires</h4>
           <p>Research analysis detailing hiring criteria, required technical skills, and candidate evaluation workflows at cloud solutions firms.</p>
-          <a href="./pdfs/ahmad-el-samadi-how-a-company-hires.pdf" download="How_A_Company_Hires.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-how-a-company-hires.pdf" download="How_A_Company_Hires.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 08</span>
           <h4>CV</h4>
           <p>A detailed professional curriculum vitae highlighting engineering coursework, technical certifications, and hands-on IT projects.</p>
-          <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="CV.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <a href="./pdfs/ahmad-el-samadi-cv.pdf" download="CV.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 09</span>
           <h4>Cover Letter</h4>
           <p>A dynamic, targeted application letter designed to adapt to specific engineering, networking, and IT operations opportunities.</p>
-          <a href="#letter" class="pdf-download-link">📝 View Cover Letter</a>
+          <a href="#letter" class="glass-pill glass-sm glass-dark">
+            <span>View Letter</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 10</span>
           <h4>Linkedin Profile</h4>
           <p>An optimized digital networking profile highlighting academic achievements, certifications, and professional background.</p>
-          <a href="https://linkedin.com/in/ahmad-el-samadi" target="_blank" class="pdf-download-link">↗ View LinkedIn Profile</a>
+          <a href="https://linkedin.com/in/ahmad-el-samadi" target="_blank" class="glass-pill glass-sm glass-dark">
+            <span>View LinkedIn</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 11</span>
-          <h4>Informational Interview Form</h4>
-          <p>Field research and Q&A findings from a professional interview with an industry Senior IT Operations Manager.</p>
-          <a href="./pdfs/ahmad-el-samadi-informational-interview-form.pdf" download="Informational_Interview_Form.pdf" class="pdf-download-link">📥 Download Assignment PDF</a>
+          <h4>Simplicity Profile</h4>
+          <p>An official university career portal profile detailing academic credentials, project experiences, and engineering skill sets.</p>
+          <a href="https://bau-csm.symplicity.com/profiles/ahmad.el.samadi.samadi2" target="_blank" class="glass-pill glass-sm glass-dark">
+            <span>View Profile</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
           <span class="assign-no">ASSIGNMENT 12</span>
-          <h4>Digital Calendar and Task Tracking</h4>
-          <p>A structured organizational system for managing project deadlines, study schedules, and professional development milestones.</p>
-          <span class="pdf-download-link disabled-link">🕒 PDF will be provided later</span>
+          <h4>Informational Interview Form</h4>
+          <p>Field research and Q&A findings from a professional interview with an industry Senior IT Operations Manager.</p>
+          <a href="./pdfs/ahmad-el-samadi-informational-interview-form.pdf" download="Informational_Interview_Form.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
 
         <div class="assignment-card">
-          <span class="assign-no">ASSIGNMENT 13</span>
+  <span class="assign-no">ASSIGNMENT 13</span>
+  <h4>Digital Calendar and Task Tracking</h4>
+  <p>A structured organizational system for managing project deadlines, study schedules, and professional development milestones.</p>
+  <a href="./pdfs/ahmad-el-samadi-digital-calendar-task-tracking.pdf" download="Digital Calendar & Task Tracking.pdf" class="glass-pill glass-sm glass-dark">
+    <span>Download PDF</span>
+    <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <polyline points="19 12 12 19 5 12"></polyline>
+    </svg>
+  </a>
+</div>
+
+        <div class="assignment-card">
+          <span class="assign-no">ASSIGNMENT 14</span>
           <h4>Leadership Graphic</h4>
           <p>A visual representation of leadership philosophies, team motivation strategies, and proactive problem-solving frameworks.</p>
-          <span class="pdf-download-link disabled-link">🕒 PDF will be provided later</span>
+          <a href="./pdfs/ahmad-el-samadi-leadership-graphic.pdf" download="Leadership_Graphic.pdf" class="glass-pill glass-sm glass-dark">
+            <span>Download PDF</span>
+            <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
         </div>
-
       </div>
     </section>
 
     <!-- 04 / WRN COURSE REFLECTION -->
     <section id="reflection" class="reflection-section reveal">
       <div class="section-tag" style="margin-bottom: 20px;">04 / WRN COURSE REFLECTION</div>
-      <p class="section-desc" style="margin-bottom: 40px; font-size: 1.2rem; color: #5c5953;">A personal reflection on the WRN Course.</p>
+      <p class="section-desc" style="margin-bottom: 40px; font-size: 1.1rem;">A personal reflection on the WRN Course.</p>
       
       <div class="reflection-content">
-        <p>Participating in the Work Ready Now course has been a highly valuable experience that bridged the gap between my academic engineering studies and practical workplace readiness. The curriculum significantly improved my <strong>Personal Development</strong> by teaching me how to assess my skills and set measurable, long-term professional goals. Through the <strong>Communication Skills</strong> modules, I learned to practice active listening, write professional emails, and collaborate effectively within a team—skills that are essential when coordinating complex network deployments or hardware builds.</p>
+        <p>Participating in the Work Ready Now (WRN) course has provided a crucial learning experience that effectively bridged the gap between academic theory in Communications and Electronics Engineering and practical, real-world workplace readiness. Throughout the course, structured modules in <strong>Personal Development</strong> guided me in critically assessing my technical strengths, identifying key growth areas, and formulating a measurable long-term career roadmap. In parallel, the <strong>Communication Skills</strong> training refined my capacity for active listening, concise technical writing, professional email protocols, and seamless teamwork—essential assets when engineering complex routing topologies, troubleshooting network infrastructures, or coordinating multi-disciplinary hardware builds.</p>
         
-        <p>Moreover, the course strengthened my <strong>Job-Seeking Skills</strong> by guiding me through crafting targeted CVs, optimizing my LinkedIn profile, and understanding what employers truly look for. I also gained crucial insights into <strong>Workplace Behaviors</strong>, emphasizing time management, taking initiative, and adapting to organizational policies. Finally, the <strong>Leadership</strong> training equipped me with actionable problem-solving frameworks and the ability to motivate others. Overall, this course has profoundly enhanced my confidence and readiness to enter the professional communications and electronics engineering field.</p>
+        <p>Furthermore, the curriculum significantly enhanced my <strong>Job-Seeking Skills</strong> through actionable guidance on crafting targeted engineering CVs, building an impactful LinkedIn and Simplicity career profiles, writing customized cover letters, and navigating modern hiring processes. The focus on <strong>Workplace Behaviors</strong> reinforced the vital importance of adaptability, organizational ethics, problem-solving, and efficient time management in high-demand technical environments. Finally, the <strong>Leadership</strong> and decision-making frameworks built the confidence necessary to guide team initiatives and drive collaborative solutions. Overall, this course has heavily strengthened my readiness to excel as an engineering professional.</p>
       </div>
     </section>
 
-    <!-- 06 / TRAINING + LEADERSHIP (Updated to match standard theme) -->
+    <!-- 05 / TRAINING + LEADERSHIP -->
     <section id="training" class="training-section reveal">
-      <div class="section-tag" style="margin-bottom: 20px;">06 / TRAINING + LEADERSHIP</div>
-      <h2 class="training-headline">Learning in rooms where things get built.</h2>
+      <div class="section-tag" style="margin-bottom: 20px;">05 / TRAINING & LEADERSHIP</div>
+      <h2 class="training-headline">Bridging theory and execution in active engineering environments.</h2>
 
       <div class="training-grid">
-        <!-- LEFT COLUMN: ACHIEVEMENTS AND TRAINING -->
         <div class="training-left">
           <h3 class="column-title">ACHIEVEMENTS & TRAINING</h3>
           
@@ -399,7 +497,6 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: LEADERSHIP & ACTIVITIES -->
         <div class="training-right">
           <h3 class="column-title">LEADERSHIP & ACTIVITIES</h3>
           
@@ -426,41 +523,11 @@
       </div>
     </section>
 
-    <!-- 07 / EDUCATION -->
-    <section id="education" class="education-section reveal">
-      <div class="section-tag">07 / EDUCATION</div>
-      
-      <div class="edu-block">
-        <div class="edu-left">
-          <h4>BEIRUT ARAB UNIVERSITY</h4>
-          <h3>B.E. in Communications and Electronics Engineering</h3>
-          <p class="cgpa">CGPA: 3.45</p>
-        </div>
-        <div class="edu-right">
-          <span class="edu-date">2024 — Present</span>
-          <span class="edu-location">Lebanon</span>
-        </div>
-      </div>
-
-      <hr class="edu-divider">
-
-      <div class="edu-block">
-        <div class="edu-left">
-          <h4>HARIRI HIGH SCHOOL</h4>
-          <h3>High School Diploma</h3>
-        </div>
-        <div class="edu-right">
-          <span class="edu-date">Sep 2023 — Jun 2024</span>
-          <span class="edu-location">Lebanon</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 08 / COVER LETTER -->
+    <!-- 06 / COVER LETTER -->
     <section id="letter" class="letter-section reveal">
       <div class="cover-letter-header">
         <div class="cover-letter-header-left">
-          <div class="section-tag">08 / COVER LETTER</div>
+          <div class="section-tag">06 / COVER LETTER</div>
           <h2 class="cover-letter-title">A letter that adapts to the opportunity.</h2>
         </div>
         <div class="cover-letter-header-right">
@@ -471,11 +538,10 @@
       </div>
 
       <div class="letter-container">
-        <!-- LEFT SIDE CONTROL PANEL -->
         <div class="letter-sidebar">
           <div class="input-group">
             <label for="nameInput">YOUR NAME</label>
-            <input type="text" id="nameInput" placeholder="Ali Naser">
+            <input type="text" id="nameInput" placeholder="Ahmad El Samadi">
           </div>
 
           <div class="input-group">
@@ -488,21 +554,19 @@
             <input type="text" id="roleInput" placeholder="Junior Network Administrator">
           </div>
 
-          <button id="copyBtn" class="btn-primary">Copy letter</button>
-          <button id="printBtn" class="btn-secondary">Print / Save PDF</button>
+          <button id="copyBtn" class="glass-pill glass-primary glass-btn-full">Copy letter</button>
+          <button id="printBtn" class="glass-pill glass-dark glass-btn-full">Print / Save PDF</button>
         </div>
 
-        <!-- RIGHT SIDE COVER LETTER SHEET -->
         <div class="letter-document" id="letterDoc">
           <div class="doc-header">
             <div class="doc-author">
-              <h3 id="authorNameTarget">ALI NASER</h3>
+              <h3 id="authorNameTarget">AHMAD EL SAMADI</h3>
               <p>COMMUNICATIONS & ELECTRONICS ENGINEERING</p>
             </div>
             <div class="doc-contact">
-              <p>BCHAMOUN, BAABDA, LEBANON</p>
-              <p>ALINASSER4541@GMAIL.COM</p>
-              <p>+961 81 804 632</p>
+              <p>SAIDA, LEBANON</p>
+              <p>AHMADSAMADI33@GMAIL.COM</p>
             </div>
           </div>
 
@@ -522,7 +586,7 @@
             <p>
               I would welcome the opportunity to attend an interview to discuss how my technical foundation and mindset can contribute to the goals of <span id="companyTargetRepeat" class="dynamic-text">Cisco</span>.
             </p>
-            <p class="doc-closing">Kind Regards,<br><strong id="signatureNameTarget">Ali Naser</strong></p>
+            <p class="doc-closing">Kind Regards,<br><strong id="signatureNameTarget">Ahmad El Samadi</strong></p>
           </div>
         </div>
       </div>
@@ -531,16 +595,133 @@
 
   <!-- LAST PAGE FOOTER -->
   <footer class="custom-footer">
-    <p class="footer-preheader">AVAILABLE FOR INTERNSHIPS, ENGINEERING PROJECTS, AND TECHNICAL COLLABORATIONS.</p>
-    <h1 class="footer-headline">Have a system worth<br>building?</h1>
-    
-    <div class="footer-contact">
-      <a href="mailto:alinasser4541@gmail.com" class="email-btn">alinasser4541@gmail.com ↗</a>
-      <span class="phone-text">+961 81 804 632</span>
+    <div class="footer-content-wrapper">
+      
+      <!-- LEFT COLUMN -->
+      <div class="footer-left">
+        <h2 class="footer-hero-title">
+          Engineering networks that <span class="highlight-purple">route</span>, <br>
+          <span class="highlight-green">connect</span>, and <span class="highlight-blue">secure</span>.
+        </h2>
+        
+        <!-- LIVE NETWORK MAP GRAPHIC CARD -->
+        <div class="network-map-card">
+          <div class="map-header">
+            <span class="map-title">SYSTEM ARCHITECTURE</span>
+            <span class="status-online"><span class="dot"></span> ONLINE</span>
+          </div>
+
+          <div class="diagram-container">
+            <svg class="diagram-lines" viewBox="0 0 300 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path id="path-route-in" d="M 60,50 Q 100,60 150,100" class="dash-line" />
+              <path id="path-switch-in" d="M 60,150 Q 100,140 150,100" class="dash-line" />
+              <path id="path-secure-in" d="M 240,50 Q 200,60 150,100" class="dash-line" />
+              <path id="path-connect-in" d="M 240,150 Q 200,140 150,100" class="dash-line" />
+
+              <path id="path-route-out" d="M 150,100 Q 100,80 60,50" class="dash-line-hidden" />
+              <path id="path-switch-out" d="M 150,100 Q 100,120 60,150" class="dash-line-hidden" />
+              <path id="path-secure-out" d="M 150,100 Q 200,80 240,50" class="dash-line-hidden" />
+              <path id="path-connect-out" d="M 150,100 Q 200,120 240,150" class="dash-line-hidden" />
+
+              <circle r="3" fill="#1a6b47" filter="url(#glow)">
+                <animateMotion dur="2.2s" repeatCount="indefinite">
+                  <mpath href="#path-route-in"/>
+                </animateMotion>
+              </circle>
+              <circle r="3" fill="#1a6b47" filter="url(#glow)">
+                <animateMotion dur="2.6s" repeatCount="indefinite">
+                  <mpath href="#path-switch-in"/>
+                </animateMotion>
+              </circle>
+              <circle r="3" fill="#1a6b47" filter="url(#glow)">
+                <animateMotion dur="2.4s" repeatCount="indefinite">
+                  <mpath href="#path-secure-in"/>
+                </animateMotion>
+              </circle>
+              <circle r="3" fill="#1a6b47" filter="url(#glow)">
+                <animateMotion dur="2.1s" repeatCount="indefinite">
+                  <mpath href="#path-connect-in"/>
+                </animateMotion>
+              </circle>
+
+              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
+                <animateMotion dur="2.7s" repeatCount="indefinite">
+                  <mpath href="#path-route-out"/>
+                </animateMotion>
+              </circle>
+              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
+                <animateMotion dur="2.3s" repeatCount="indefinite">
+                  <mpath href="#path-switch-out"/>
+                </animateMotion>
+              </circle>
+              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
+                <animateMotion dur="2.8s" repeatCount="indefinite">
+                  <mpath href="#path-secure-out"/>
+                </animateMotion>
+              </circle>
+              <circle r="2.5" fill="#0052cc" filter="url(#glow)">
+                <animateMotion dur="2.5s" repeatCount="indefinite">
+                  <mpath href="#path-connect-out"/>
+                </animateMotion>
+              </circle>
+            </svg>
+
+            <div class="node node-top-left">ROUTE</div>
+            <div class="node node-bottom-left">SWITCH</div>
+            <div class="node node-center">
+              <span>PROCESS</span>
+              <small>CORE / OSPF</small>
+            </div>
+            <div class="node node-top-right">SECURE</div>
+            <div class="node node-bottom-right">CONNECT</div>
+          </div>
+
+          <div class="map-footer">
+            <span>OSPF / VLAN</span>
+            <span class="status-text">ACTIVE</span>
+            <span>WAN / LAN</span>
+            <span class="status-text">LINKED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="footer-right">
+        <p class="footer-preheader">Have a system worth building?</p>
+        <h1 class="footer-headline">Available for Internships, Engineering Projects, and Technical Opportunities.</h1>
+        
+        <div class="footer-contact">
+          <a href="mailto:ahmadsamadi33@gmail.com" class="glass-pill glass-footer">
+            <span>ahmadsamadi33@gmail.com</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+          <a href="tel:+96183732933" class="glass-pill glass-footer">
+            <span>+961 83732933</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
     </div>
     
     <div class="footer-bottom-bar">
-      <span class="location">BCHAMOUN • BAABDA • LEBANON</span>
+      <span class="location">© 2026 Ahmad El Samadi • Saida, Lebanon</span>
       <span class="languages">ARABIC — NATIVE • ENGLISH — FLUENT</span>
     </div>
   </footer>
